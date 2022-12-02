@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Добавим в раздел <head> необходимые файлы — ссылку на используемые шрифты,
+    библиотеку jQuery,
+    а также плагин prefixfree (чтобы не писать для свойств браузерные префиксы)
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Адаптивная вёрстка сайта</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+          <!-- Логотип -->
+          <a class="logo" href="">
+            
+          </a>
+          <!-- Кнопка для показа/скрытия главного меню -->
+          <div class="nav-toggle"><span></span></div>
+          <!-- Форма поиска по сайту -->
+          <form action="" method="get" id="searchform">
+            <input type="text" placeholder="Искать на сайте...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <!-- Главное меню -->
+          <ul id="menu">
+            <li><a href="https://vk.com/kepirak">Блог</a></li>
+            <li><a href="https://otvet.mail.ru/question/35526146">Портфолио</a></li>
+            <li><a href="http://www.bolshoyvopros.ru/questions/1186868-kak-pravilno-ob-avtore-ili-o-avtore.html">Об авторе</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="posts-list">
+          <!-- Анонс статей -->
+          <article id="post-1" class="post">
+            <div class="thumb-wrap">
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/d9MyW72ELq0" title="Avatar: The Way of Water | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="post-content">
+              <div class="category"><a href="https://veryimportantlot.com/ru/news/blog/dizajn">Видео</a></div>
+              <h2 class="post-title">Аватар 2: Путь воды</h2>
+              <p>Скоро в кино выходит долгожданное продолжение фильма Аватар, выпущенного в 2009 году.
+                Более декады прошло с момента выпуска предыдущей части.
+                Удастся ли Джеймсу Кэмерону сорвать куш в мировых сборах и в этот раз?
+                Будем наблюдать 🎬
+              </p>
+              <div class="post-footer">
+                <a class="more-link" href="https://www.avatar.com/">Продолжить чтение</a>
+                <div class="post-social">
+                  <a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://ru.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+        </div> <!-- конец div class="posts-list"-->
+        <!-- В боковую колонку добавим список категорий,
+             последние записи и форму подписки на рассылку -->
+        <aside>
+            <div class="widget">
+            <h3 class="widget-title">Категории</h3>
+            <ul class="widget-category-list">
+                <li><a href="index.html">Дизайн</a> (4)</li>
+                <li><a href="vijeo.html">Видео</a> (1)</li>
+            </ul>
+            </div>
+            <div class="widget">
+            <h3 class="widget-title">Последние записи</h3>
+            <ul class="widget-posts-list">
+                <li>
+                <div class="post-image-small">
+                    <a href="index.html"><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_slovar_rodnoy_prirodi.jpg"></a>
+                </div>
+                <h4 class="widget-post-title">Весна</h4>
+                </li>
+                <li>
+                <div class="post-image-small">
+                    <a href="summer.html"><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_Russia.jpg"></a>
+                </div>
+                <h4 class="widget-post-title">Лето</h4>
+                </li>
+                <li>
+                <div class="post-image-small">
+                    <a href="autumn.html"><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_rodnaya_priroda_osen.jpg"></a>
+                </div>
+                <h4 class="widget-post-title">Осень</h4>
+                </li>
+            </ul>
+            </div>
+            <div class="widget">
+            <h3 class="widget-title">Подписка на рассылку</h3>
+            <form action="" method="post" id="subscribe">
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+            </div>
+        </aside>
+    </div> <!-- конец div class="container"-->
+    <!--В подвале страницы разместим информацию о копирайте,
+        кнопки социальных сетей и ссылку на электронную почту-->
+        <footer>
+            <div class="container">
+              <div class="footer-col"><span>Мой блог © 2016</span></div>
+              <div class="footer-col">
+                <div class="social-bar-wrap">
+                  <a title="Facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a title="Twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a title="Pinterest" href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+                  <a title="Instagram" href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="footer-col">
+                <a href="mailto:admin@yoursite.ru">Написать письмо</a>
+              </div>
+            </div>
+          </footer>
+          <!--За показ-скрытие верхнего меню при клике на кнопку
+            (переключается высота меню — от нулевой до равной её содержимому)
+             отвечает код jQuery-->
+          <script>
+          $('.nav-toggle').on('click', function(){
+            $('#menu').toggleClass('active');
+          });
+          </script>
+          </body>
+          </html>

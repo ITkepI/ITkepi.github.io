@@ -1,0 +1,28 @@
+
+.fig_test {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(134, 76, 0);
+    border-radius: 50%;
+}
+.fig_test::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(230, 215, 195);
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+}
+.fig_test::after {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    left: 45px;
+    top: 45px;
+}
